@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'me.potato'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('io.netty:netty-resolver-dns-native-macos:4.1.81.Final:osx-aarch_64')
+    testImplementation('io.netty:netty-resolver-dns-native-macos:4.1.81.Final:osx-aarch_64')
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+
+    implementation('org.redisson:redisson:3.17.6')
+    implementation("org.projectlombok:lombok:1.18.20")
+    annotationProcessor("org.projectlombok:lombok:1.18.20")
+
+    testImplementation("org.projectlombok:lombok:1.18.20")
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
+
+    testImplementation("io.projectreactor:reactor-test:3.4.22")
+}
+
+test {
+    useJUnitPlatform()
+}
