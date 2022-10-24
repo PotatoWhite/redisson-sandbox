@@ -9,7 +9,7 @@ import reactor.test.StepVerifier;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
-public class HyperLogLogTest extends BaseTest {
+public class Lec11HyperLogLogTest extends BaseTest {
     @Test // 12.5 kb
     public void count() {
         RHyperLogLogReactive<Long> counter = client.getHyperLogLog("user:visits", LongCodec.INSTANCE);
